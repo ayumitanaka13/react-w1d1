@@ -7,7 +7,7 @@ class Category extends React.Component {
     render() {
         let categories = this.props.data.map((result, index) => {
             return(
-                <li key={index}>
+                <li key={index} className="cat-link left valign-wrapper">
                     <i className="material-icons">{result.icon}</i>
                     {result.title}
                 </li>
@@ -15,9 +15,11 @@ class Category extends React.Component {
         })
 
         return(
-            <ul id="ul" className="cat-nav center-align">
-                {categories}
-            </ul>
+            <div id="row">
+                <ul className="cat-nav center-align">
+                    {categories}
+                </ul>
+            </div>
         )
     }
 }
